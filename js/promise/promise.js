@@ -1,0 +1,2 @@
+function Promise () {}
+new Promise()
