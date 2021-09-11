@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .gird-wrap {
+      display: inline-grid;
+      width: 500px;
+      height: 500px;
+      grid-template-columns: repeat(auto-fill, 100px);
+      grid-template-rows: repeat(auto-fill, 100px);
+    }
+    .test {
+      line-height: 50px;
+      text-align: center;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="gird-wrap">
+    <div class="test">1</div>
+    <div class="test">2</div>
+    <div class="test">3</div>
+    <div class="test">4</div>
+    <div class="test">5</div>
+    <div class="test">6</div>
+    <div class="test"></div>
+    <div class="test"></div>
+    <div class="test"></div>
+    <div class="test"></div>
+  </div>
+  <script>
+    var divs = document.querySelectorAll('.test');
+    setInterval(a, 2000)
+    function a () {
+      divs.forEach((div, index) => {
+      var r = Math.floor(Math.random() * 255);
+      var g = Math.floor(Math.random() * 255);
+      var b = Math.floor(Math.random() * 255);
+      div.style.background = "rgb(" + r + ',' + g + ',' + b + ")";
+      div.innerHTML = index
+    })
+    }
+  </script>
+</body>
+
+</html>

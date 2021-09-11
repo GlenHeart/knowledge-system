@@ -1,0 +1,35 @@
+<body class="HolyGrail">
+  <header>header</header>
+  <div class="HolyGrail-body">
+    <main class="HolyGrail-content">...</main>
+    <nav class="HolyGrail-nav">...</nav>
+    <aside class="HolyGrail-ads">...</aside>
+  </div>
+  <footer>footer</footer>
+</body>
+<style>
+  .HolyGrail {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    margin: 0;
+  }
+  .HolyGrail-body {
+    flex: 1;
+    display: flex;
+  }
+  .HolyGrail-nav {
+    background-color: orange;
+  }
+  .HolyGrail-nav, .HolyGrail-ads {
+  /* 两个边栏的宽度设为12em */
+  flex: 0 0 12em;
+} 
+.HolyGrail-content {
+  flex: 1;
+  background-color: orchid;
+}
+.HolyGrail-nav {
+  order: -1;
+}
+</style>

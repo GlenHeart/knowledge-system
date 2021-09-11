@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .parent {
+    width: 200px;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+  }
+
+  .child {
+    box-sizing: border-box;
+    background-color: white;
+    flex: 0 0 25%;
+    width: 25%;
+    height: 50px;
+    border: 1px solid red;
+  }
+  .compare {
+    width: 200px;
+    height: 150px;
+    background-color: black;
+  }
+  .compare-child {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 50px;
+    width: 25%;
+    border: 1px solid red;
+  }
+  </style>
+</head>
+
+<body>
+  <h3>流式布局</h3>
+  <div class="parent">
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+  </div>
+  <br>
+  <br>
+  <div class="compare">
+    <span class="compare-child">2</span><span class="compare-child">2</span><span class="compare-child">2</span><span class="compare-child">2</span>
+    <span class="compare-child">2</span>
+    <span class="compare-child">2</span>
+    <span class="compare-child">2</span>
+    <span class="compare-child">2</span>
+  </div>
+  <p>原生dom标签之间都有空格 font-size = 0</p>
+</body>
+
+</html>
